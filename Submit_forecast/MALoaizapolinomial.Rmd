@@ -1,6 +1,6 @@
 ---
 title: "NEON forecast challenge submission"
-author: '"Mario Loaiza'
+author: 'Mario Loaiza'
 output: html_document
 date: "`r Sys.Date()`"
 ---
