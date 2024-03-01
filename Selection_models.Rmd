@@ -185,6 +185,10 @@ models <- list(
   model8 = lm(site_target$temperature ~ poly(site_target$air_temperature, degree = 1) +
                 site_target$surface_downwelling_shortwave_flux_in_air+
                 lag(site_target$temperature, 1)))
+```
+
+
+```{r}
 
 model2<- list(
   longwaveP = lm(temperature ~ air_temperature + 
@@ -207,7 +211,9 @@ model2<- list(
                 lag(temperature, 1), data = targets_lm_noNA),
   ewindPplag = lm(temperature ~ poly(air_temperature, degree = 1) +
                 poly(eastward_wind, degree = 1)+
-                lag(temperature, 1), data = targets_lm_noNA)
+                lag(temperature, 1), data = targets_lm_noNA),
+  longwave = lm(temperature ~ poly(surface_downwelling_longwave_flux_in_air, degree = 1) + 
+                 poly(eastward_wind, degree = 1), data = targets_lm_noNA)
 )
 ```
 
